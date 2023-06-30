@@ -1,0 +1,224 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family:'Android';
+    src: url('/Desafios/Arquivos/fontes/idroid.otf') format('opentype');
+}
+
+
+:root{                                           /*Possibilita a criação de 'variaveis de css' */ /*que podem ser usadas durante todo o codigo*/
+    --cor01: #C5EBD6;
+    --cor02: #52D18B;
+    --cor03: #3E9E69;
+    --cor04: #136637;
+    --cor05: #053a1eea;
+
+    --fonte-padrao : Arial,Verdana,Helvetica,sans-serif;
+    --fonte-destaque: 'Bebas Neue', sans-serif;
+    --fonte-android: 'Android' , sans-serif ;
+}
+
+*{                     /*Configuração global*//*O que mudar aqui muda em tudo*/
+    margin: 0px;
+    padding: 0px;
+
+}
+
+
+body{
+    background-color: var(--cor01);
+}
+header{
+    background-image: linear-gradient(to bottom, var(--cor03), var(--cor05));
+    color: white;
+
+    text-align: center;
+
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+header >h1{
+    font-family:var(--fonte-destaque) ;
+    color: white;
+
+    font-size: 3em;
+    font-weight: normal;
+
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);
+
+}
+header > p{
+    font-size: 1.2em;
+
+    padding-left: 10px;
+    padding-right: 10px;
+
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.356);
+}
+nav{
+    background-color: var(--cor05);
+
+    padding: 8px;
+
+}
+nav > a {
+    font-family: var(--fonte-padrao);
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+
+    padding: 8px;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.356);
+}
+nav >a:hover{
+    background-color: var(--cor03);
+    border-radius: 5px;
+}
+main{
+    background: white;
+
+    min-width: 300px;
+    max-width: 1000px;
+
+    margin: auto;
+    margin-bottom: 30px;
+
+    padding: 20px;
+
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.342);
+
+}
+main strong{
+    font-weight: bold;
+    color: var(--cor03);
+}
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor04);
+
+    background-color: var(--cor01);
+}
+main a::after{
+    content: '\00A0\1F517';
+
+}
+main a:hover{
+    color: var(--cor03);
+    text-decoration: underline;
+}
+article > h1{
+    font-family:var(--fonte-android);
+    color: var(--cor05);
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.356);
+
+}
+article > h2{
+
+    font-family: var(--fonte-android);
+    color: var(--cor04);
+    font-size: 1.3em;
+    font-weight: normal;
+
+    background-image: linear-gradient(to right, var(--cor01),transparent);
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.356);
+}
+article > p{
+    text-align: justify;
+    margin: 20px 0px;
+    text-indent: 15px;
+    line-height: 2em;
+}
+div#video{
+
+    background-color: var(--cor02);
+
+    margin: 30px 0px;
+
+    padding: 10px;
+    padding-bottom: 54.7%;
+
+    border-radius: 10px;
+    border: 5px solid var(--cor04);
+
+    position: relative;
+}
+div#video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+
+    width: 90% ;
+    height: 90%;
+}
+aside{
+    background-color: var(--cor02);
+    text-align: justify;
+
+    padding: 7px;
+
+    border-radius: 7px;
+
+}
+aside > h1{
+    color: white;
+    background-color: var(--cor04);
+
+    margin: -10px -7px 0px -7px;                             /*Isso é pra não ficar um espaço entre o background do h1 e o propio aside*/
+
+    padding: 5px;
+
+    border-radius: 3px 3px 0px 0px;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.356);
+
+}
+aside>p{
+    padding: 10px 0px;
+    line-height: 2em;
+    text-indent: 20px;
+
+}
+aside>ul{
+    list-style-type: '\1F5F8\00A0';
+    list-style-position: inside;
+    columns: 2;
+}
+aside strong{
+    color: black;
+}
+footer{
+    background-color: var(--cor05);
+    text-align: center;
+    color: white;
+
+    min-width: 300px;
+    max-width: 1030px;
+
+    margin: auto;
+    margin-bottom: 10px;
+
+    padding: 7px;
+
+    border-radius: 5px;
+
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.356);
+
+}
+img{
+    width: 100%;
+}
+.pequena{
+    max-width: 300px;
+    display: block;
+    margin: auto;
+}
